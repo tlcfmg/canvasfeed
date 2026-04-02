@@ -346,23 +346,23 @@ def get_summary(course_id: int, discussion_id: int) -> str:
                     "You are an expert educational analyst. "
                     "You will receive course context and a set of student discussion posts. "
                     "Write a well-organised, easy-to-read Markdown report for the instructor. "
-                    "Use proper Markdown: ## for section headings, - for bullet points, "
-                    "and **bold** for key terms. "
+                    "Use proper Markdown: **bold** for section titles, - for bullet points. "
+                    "Do not use any # markdown headings. "
                     "Be concise, coherent, specific, and objective throughout. "
                     "Use exactly these five sections in this order:\n\n"
-                    "## Overall Summary\n"
+                    "**Overall Summary**\n\n"
                     "3-5 sentences covering the key themes discussed, the range of student "
                     "perspectives, and the overall quality of engagement with the material.\n\n"
-                    "## Common Strengths\n"
+                    "**Common Strengths**\n"
                     "Bullet list of concepts or arguments that students generally grasped well, "
                     "with a brief explanation for each point.\n\n"
-                    "## Misconceptions and Gaps\n"
+                    "**Misconceptions and Gaps**\n"
                     "Bullet list of recurring misunderstandings or areas lacking depth, "
                     "grounded in the course learning objectives.\n\n"
-                    "## Students to Watch\n"
+                    "**Students to Watch**\n"
                     "Bullet list naming students who showed exceptional insight OR who may "
                     "benefit from extra support, with a one-sentence rationale each.\n\n"
-                    "## Recommended Discussion Points\n"
+                    "**Recommended Discussion Points**\n"
                     "Numbered list of 2-3 concrete topics to address in the next class, "
                     "directly linked to the misconceptions or gaps identified above."
                 ),
@@ -635,7 +635,7 @@ concrete points to address in your next class.
         df_raw["Follow-Up Question"] = followups
 
         # ── Step 3: generate discussion summary ───────────────────────────────
-        pb.progress(1.0, text="Creating discussion summary…")
+        pb.progress(1.0)
         try:
             summary = get_summary(course_id, discussion_id)
         except Exception as exc:

@@ -478,7 +478,6 @@ def render_followup_tab(df: pd.DataFrame) -> None:
     # ── Idle prompt ───────────────────────────────────────────────────────────
     idx = st.session_state.get("current_idx")
     if idx is None:
-        st.info("Click **Pick a Student** to randomly select the first student.")
         return
 
     # ── Student card ──────────────────────────────────────────────────────────

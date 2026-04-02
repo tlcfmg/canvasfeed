@@ -438,7 +438,7 @@ def render_summary_tab(summary: str, df: pd.DataFrame) -> None:
 def render_followup_tab(df: pd.DataFrame) -> None:
     st.markdown(
         "<p class='section-caption'>"
-        "Randomly select a student to ask a follow-up question. Each student appears at most once per session."
+        "Randomly select one student to ask a follow-up question. Each student appears at most once per session."
         "</p>",
         unsafe_allow_html=True,
     )

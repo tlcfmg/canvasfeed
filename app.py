@@ -53,7 +53,7 @@ LLM_MODEL = os.getenv("LLM_MODEL", "mistral-small-3.2")
 # expected. This text is embedded in both the follow-up question prompt and
 # the discussion summary prompt, so the output is grounded in your course.
 COURSE_CONTEXT = """
-Course: Digital Analytics for Communication Science
+Course: Digital Analytics
 
 Objectives
 The course develops students knowledge, understanding, skills, and critical

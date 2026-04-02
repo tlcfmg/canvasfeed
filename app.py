@@ -412,7 +412,7 @@ def render_summary_tab(summary: str, df: pd.DataFrame) -> None:
     st.markdown(
         "<p class='section-caption'>"
         "Analysis of what students understood, where they struggled, "
-        "and what to address in class."
+        "and what to address in class"
         "</p>",
         unsafe_allow_html=True,
     )
@@ -438,8 +438,7 @@ def render_summary_tab(summary: str, df: pd.DataFrame) -> None:
 def render_followup_tab(df: pd.DataFrame) -> None:
     st.markdown(
         "<p class='section-caption'>"
-        "Randomly select students to call on. Each student appears at most once per session. "
-        "Follow-up questions are pre-generated, so selection is instant."
+        "Randomly select a student to ask a follow-up question. Each student appears at most once per session."
         "</p>",
         unsafe_allow_html=True,
     )

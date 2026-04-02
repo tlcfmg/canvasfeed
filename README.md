@@ -1,4 +1,4 @@
-# canvasfeed
+# ∞ canvasfeed
 
 A local Streamlit app that helps university instructors get more out of Canvas discussion boards. Paste a discussion URL, and the app:
 

@@ -2,10 +2,10 @@
 
 A local Streamlit app that helps university instructors get more out of Canvas discussion boards. Paste a discussion URL, and the app:
 
-- Generates a structured AI analysis of all student submissions (themes, strengths, misconceptions, students to watch, recommended discussion points).
+- Generates a structured analysis of all student submissions (themes, strengths, misconceptions, students to watch, recommended discussion points).
 - Lets you randomly pick students during class and instantly shows a personalised Socratic follow-up question for each one.
 
-Designed to run **locally on the instructor's laptop** and be shared on-screen during class.
+Designed to run **locally on the instructor's laptop** and be shared on-screen during class. You can preview how the user interface looks in [this demo](https://canvasfeed.streamlit.app).
 
 ---
 
@@ -153,6 +153,7 @@ All course-specific configuration is at the top of `app.py`:
 ```
 canvasfeed/
 ├── app.py              # Main Streamlit application
+├── requirements.txt    # Python dependencies
 ├── .env                # Your local secrets (never committed to Git)
 ├── .env.example        # Template — copy this to .env to get started
 ├── .gitignore          # Excludes .env, notebooks, and other sensitive files
@@ -179,3 +180,9 @@ Fill in the `COURSE_CONTEXT` block in `app.py` with your actual course descripti
 
 **Results are stale after students post new entries**
 Results are cached for one hour. To force a refresh, restart the app (`Ctrl+C` in the terminal, then `streamlit run app.py`).
+
+---
+
+## Contact
+
+For questions about this app, reach out to [tlc-fmg@uva.nl](mailto:tlc-fmg@uva.nl).
